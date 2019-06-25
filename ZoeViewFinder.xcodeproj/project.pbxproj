@@ -12,6 +12,7 @@
 		18380F9B22C26E4B001E075F /* ZoeViewFinder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18380F9922C26E4B001E075F /* ZoeViewFinder.xcdatamodeld */; };
 		18380F9D22C26E4F001E075F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18380F9C22C26E4F001E075F /* Assets.xcassets */; };
 		18380FA022C26E4F001E075F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18380F9E22C26E4F001E075F /* LaunchScreen.storyboard */; };
+		18380FA822C27E11001E075F /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18380FA722C27E11001E075F /* AddPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		18380F9C22C26E4F001E075F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18380F9F22C26E4F001E075F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18380FA122C26E4F001E075F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18380FA722C27E11001E075F /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		18380F8622C26E4B001E075F = {
 			isa = PBXGroup;
 			children = (
+				18380FA722C27E11001E075F /* AddPhotoViewController.swift */,
 				18380F9122C26E4B001E075F /* ZoeViewFinder */,
 				18380F9022C26E4B001E075F /* Products */,
 			);
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18380F9322C26E4B001E075F /* AppDelegate.swift in Sources */,
+				18380FA822C27E11001E075F /* AddPhotoViewController.swift in Sources */,
 				18380F9B22C26E4B001E075F /* ZoeViewFinder.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

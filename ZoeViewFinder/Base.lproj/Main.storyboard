@@ -49,20 +49,12 @@
         <!--Add New Photo-->
         <scene sceneID="KSY-wd-MX9">
             <objects>
-                <viewController id="8qX-V5-Zq6" sceneMemberID="viewController">
+                <viewController id="8qX-V5-Zq6" customClass="AddPhotoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u4b-ZR-kbh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJE-EW-Dnj">
-                                <rect key="frame" x="66" y="243" width="54" height="30"/>
-                                <state key="normal" title="Camera"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJV-t8-zbw">
-                                <rect key="frame" x="177" y="244" width="92" height="30"/>
-                                <state key="normal" title="Photo Library"/>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GUEST_06ec4798-d497-4f3e-ac92-110f47d87cac" translatesAutoresizingMaskIntoConstraints="NO" id="iqY-v4-w2T">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="GUEST_06ec4798-d497-4f3e-ac92-110f47d87cac" translatesAutoresizingMaskIntoConstraints="NO" id="iqY-v4-w2T">
                                 <rect key="frame" x="40" y="-263" width="240" height="488"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FUA-rH-hKT">
@@ -70,44 +62,51 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textField:" destination="8qX-V5-Zq6" eventType="editingDidEnd" id="cEA-JB-7PQ"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGn-eY-05t">
                                 <rect key="frame" x="143" y="390" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Br-0f-Sfv">
-                                <rect key="frame" x="157" y="282" width="44" height="30"/>
-                                <state key="normal" title="Album"/>
+                                <connections>
+                                    <action selector="save:" destination="8qX-V5-Zq6" eventType="touchUpInside" id="nab-iz-jgE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MJE-EW-Dnj" firstAttribute="top" secondItem="iqY-v4-w2T" secondAttribute="bottom" constant="18" id="0Y8-CO-PLz"/>
                             <constraint firstItem="2Qr-2h-a2c" firstAttribute="trailing" secondItem="ZGn-eY-05t" secondAttribute="trailing" constant="143" id="1en-F8-EDT"/>
-                            <constraint firstItem="0Br-0f-Sfv" firstAttribute="top" secondItem="IJV-t8-zbw" secondAttribute="bottom" constant="8" id="6Sy-js-13O"/>
                             <constraint firstItem="ZGn-eY-05t" firstAttribute="leading" secondItem="2Qr-2h-a2c" secondAttribute="leading" constant="143" id="BQw-wZ-G7X"/>
                             <constraint firstItem="2Qr-2h-a2c" firstAttribute="bottom" secondItem="ZGn-eY-05t" secondAttribute="bottom" constant="148" id="Glx-3h-eo8"/>
-                            <constraint firstItem="0Br-0f-Sfv" firstAttribute="top" secondItem="IJV-t8-zbw" secondAttribute="bottom" constant="8" id="HHd-KC-45n"/>
-                            <constraint firstItem="2Qr-2h-a2c" firstAttribute="trailing" secondItem="0Br-0f-Sfv" secondAttribute="trailing" constant="119" id="HVG-k3-Zd9"/>
                             <constraint firstItem="ZGn-eY-05t" firstAttribute="top" secondItem="FUA-rH-hKT" secondAttribute="bottom" constant="32" id="Ovv-KT-HNN"/>
-                            <constraint firstItem="0Br-0f-Sfv" firstAttribute="leading" secondItem="2Qr-2h-a2c" secondAttribute="leading" constant="157" id="V5N-qV-1Qk"/>
                             <constraint firstItem="FUA-rH-hKT" firstAttribute="leading" secondItem="2Qr-2h-a2c" secondAttribute="leading" constant="112" id="VGu-gY-aRp"/>
                             <constraint firstItem="2Qr-2h-a2c" firstAttribute="trailing" secondItem="FUA-rH-hKT" secondAttribute="trailing" constant="111" id="ZA4-DV-z1t"/>
                             <constraint firstItem="iqY-v4-w2T" firstAttribute="leading" secondItem="2Qr-2h-a2c" secondAttribute="leading" constant="40" id="ZLl-XO-cpL"/>
-                            <constraint firstItem="FUA-rH-hKT" firstAttribute="top" secondItem="0Br-0f-Sfv" secondAttribute="bottom" constant="16" id="a7z-dk-9hZ"/>
-                            <constraint firstItem="IJV-t8-zbw" firstAttribute="top" secondItem="iqY-v4-w2T" secondAttribute="bottom" constant="19" id="lTY-yo-WBn"/>
-                            <constraint firstItem="2Qr-2h-a2c" firstAttribute="trailing" secondItem="IJV-t8-zbw" secondAttribute="trailing" constant="51" id="nLi-CA-Ogj"/>
-                            <constraint firstItem="IJV-t8-zbw" firstAttribute="leading" secondItem="MJE-EW-Dnj" secondAttribute="trailing" constant="57" id="ngJ-de-U0f"/>
                             <constraint firstItem="2Qr-2h-a2c" firstAttribute="bottom" secondItem="FUA-rH-hKT" secondAttribute="bottom" constant="210" id="oR9-or-LwF"/>
-                            <constraint firstItem="FUA-rH-hKT" firstAttribute="top" secondItem="MJE-EW-Dnj" secondAttribute="bottom" constant="55" id="odR-JU-9SI"/>
                             <constraint firstItem="2Qr-2h-a2c" firstAttribute="trailing" secondItem="iqY-v4-w2T" secondAttribute="trailing" constant="40" id="qri-cY-Mub"/>
-                            <constraint firstItem="MJE-EW-Dnj" firstAttribute="leading" secondItem="2Qr-2h-a2c" secondAttribute="leading" constant="66" id="rTX-sb-h1l"/>
-                            <constraint firstItem="IJV-t8-zbw" firstAttribute="leading" secondItem="MJE-EW-Dnj" secondAttribute="trailing" constant="57" id="wXL-Qi-EEX"/>
-                            <constraint firstItem="FUA-rH-hKT" firstAttribute="top" secondItem="0Br-0f-Sfv" secondAttribute="bottom" constant="16" id="xyI-Em-nYv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Qr-2h-a2c"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add New Photo" id="Uxa-3Z-AdA"/>
+                    <navigationItem key="navigationItem" title="Add New Photo" id="Uxa-3Z-AdA">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="FJM-G6-FYl">
+                                <connections>
+                                    <action selector="takePhoto:" destination="8qX-V5-Zq6" id="uop-BV-om2"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="vue-Qd-JWc">
+                                <connections>
+                                    <action selector="findPhoto:" destination="8qX-V5-Zq6" id="phQ-sm-7jk"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="photo" destination="iqY-v4-w2T" id="zJm-uU-RP2"/>
+                        <outlet property="save" destination="ZGn-eY-05t" id="cOo-2x-kpo"/>
+                        <outlet property="textField" destination="FUA-rH-hKT" id="U5X-tH-wbg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bo8-8D-ieW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
